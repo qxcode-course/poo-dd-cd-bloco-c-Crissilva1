@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-01_19-29-59",
+            "content": "@@ -1634,21 +1634,20 @@\n     \n-qtd_\n+  \n caixas=\n-in\n+lis\n t(ar\n@@ -1667,34 +1667,29 @@\n     \n+  \n-mercado=Mercado(qtd_caixas\n+espera=list(args%5B2%5D\n )%0A  \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-01_19-32-09",
+            "content": "@@ -290,26 +290,9 @@\n e%5D=%5B\n-None%5D * qtd_caixas\n+%5D\n %0A   \n@@ -1143,10 +1143,9 @@\n dex \n-%3C \n+%3E\n 0 or\n@@ -1352,30 +1352,8 @@\n None\n-%0A        return pessoa\n %0A%0Ade\n@@ -1869,170 +1869,83 @@\n     \n-index=int(args%5B1%5D)%0A            mercado.chamar_Cliente(index)%0A        elif args %5B0%5D==%22finish%22:%0A            index=int(args%5B1%5D)%0A            mercado.finalizar(index)%0A\n+print(mercado)%0A        elif args %5B0%5D==%22finish%22:%0A            print (mercado)\n %0A%0Ama\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-01_19-40-50",
+            "content": "@@ -407,17 +407,16 @@\n n(%5B%22----\n--\n %22 if ele\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-01_19-41-51",
+            "content": "@@ -558,17 +558,16 @@\n %22Caixas:\n- \n %5B%7Bcaixas\n@@ -577,17 +577,16 @@\n nEspera:\n- \n %5B%7Bespera\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-01_19-42-25",
+            "content": "@@ -1385,16 +1385,22 @@\n  return \n+pessoa\n %0A%0Adef ma\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-01_19-42-51",
+            "content": "@@ -796,25 +796,24 @@\n rint (%22fail:\n- \n caixa inexis\n@@ -907,17 +907,16 @@\n t(%22fail:\n- \n caixa oc\n@@ -1001,17 +1001,16 @@\n  (%22fail:\n- \n sem clie\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-01_19-43-12",
+            "content": "@@ -1019,35 +1019,16 @@\n entes%22)%0A\n-            return%0A\n         \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-11-01_19-44-53",
+            "content": "@@ -1236,25 +1236,24 @@\n print(%22fail:\n- \n caixa inexis\n@@ -1340,25 +1340,24 @@\n print(%22fail:\n- \n caixa vazio%22\n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-11-01_19-45-23",
+            "content": "@@ -1415,206 +1415,8 @@\n n %0A%0A\n-    def give_up (self, nome:str)-%3ENone:%0A        for i, pessoa in enumerate (self.__espera):%0A            if pessoa.get_nome() == nome:%0A                del self.__espera%5Bi%5D%0A                break%0A%0A%0A%0A%0A%0A\n def \n",
+            "lines": "76"
+        },
+        {
+            "label": "2025-11-01_20-11-39",
+            "content": "@@ -1423,17 +1423,15 @@\n def \n-sair_fila\n+give_up\n  (se\n@@ -1445,23 +1445,16 @@\n e:str)-%3E\n-Pessoa%7C\n None:%0A  \n@@ -1565,531 +1565,50 @@\n     \n-aux=self.__espera%5Bi%5D%0A                del self.__espera%5Bi%5D%0A                return aux%0A    %0A    def Furar_fila(self,nome:str)-%3EPessoa %7CNone:%0A          if len(self.__espera) == 0:%0A            print (%22fail: sem clientes%22)%0A            return%0A          for i, pessoa in enumerate(self.__espera):%0A              if pessoa.get_nome() == nome:%0A                  aux=self.__espera%5Bi%5D%0A                  del self.__espera%5Bi%5D%0A                  self.__espera = %5Bpessoa%5D + self.__espera%0A                  return aux%0A              %0A        \n+del self.__espera%5Bi%5D%0A                break\n %0A%0A%0A%0A\n",
+            "lines": "86"
+        },
+        {
+            "label": "2025-11-01_20-45-13",
+            "content": "class Pessoa:\n    def __init__(self, nome:str):\n        self.__nome=nome\n    \n    def get_nome(self)->str:\n        return self.__nome\n    \n    def __str__(self)->str:\n        return self.__nome\n\nclass Mercado:\n    def __init__(self, qtd_caixas:int=0):\n        self.__caixas:list[Pessoa|None]=[None] * qtd_caixas\n        self.__espera :list[Pessoa]=[]\n        \n    def __str__(self):\n        caixas=\", \".join([\"-----\" if elem is None else str(elem) for elem in self.__caixas])\n        espera= \", \".join([str (elem)for elem in self.__espera])\n        return f\"Caixas: [{caixas}]\\nEspera: [{espera}]\"\n    \n    def chegar(self,pessoa:Pessoa)->None:\n        self.__espera.append(pessoa)\n\n    def chamar_Cliente(self, index:int)->None:\n        if index <0 or index >= len(self.__caixas):\n            print (\"fail: caixa inexistente\")\n            return\n        if self.__caixas[index]is not None:\n            print(\"fail: caixa ocupado\")\n            return\n        if len(self.__espera)==0:\n            print (\"fail: sem clientes\")\n            return\n        self.__caixas[index]=self.__espera[0]\n        del self.__espera[0]\n\n    def finalizar(self, index:int)->Pessoa| None:\n        if index < 0 or index >=len(self.__caixas):\n            print(\"fail: caixa inexistente\")\n            return\n        if self.__caixas[index] is None:\n            print(\"fail: caixa vazio\")\n        self.__caixas[index]=None\n        return \n\n    def sair_fila (self, nome:str)->Pessoa|None:\n        for i, pessoa in enumerate (self.__espera):\n            if pessoa.get_nome() == nome:\n                aux=self.__espera[i]\n                del self.__espera[i]\n                return aux\n    \n    def Furar_fila(self,nome:str)->Pessoa |None:\n          if len(self.__espera) == 0:\n            print (\"fail: sem clientes\")\n            return\n          for i, pessoa in enumerate(self.__espera):\n              if pessoa.get_nome() == nome:\n                  aux=self.__espera[i]\n                  del self.__espera[i]\n                  self.__espera = [pessoa] + self.__espera\n                  return aux\n              \n        \n\n\n\n\n\ndef main():\n    mercado=Mercado()\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(mercado)\n        elif args[0]==\"init\":\n          qtd_caixas=int(args[1])\n          mercado=Mercado(qtd_caixas)\n        elif args [0]==\"arrive\":\n            nome=str(args[1])\n            pessoa=Pessoa(nome)\n            mercado.chegar(pessoa)\n        elif args [0]==\"call\":\n            index=int(args[1])\n            mercado.chamar_Cliente(index)\n        elif args [0]==\"finish\":\n            index=int(args[1])\n            mercado.finalizar(index)\n\n\nmain()\n\n\n\n\n\n",
+            "lines": "100"
+        }
+    ]
+}
