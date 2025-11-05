@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-05_01-06-54",
+            "content": "@@ -2805,32 +2805,33 @@\n e%22:%0A            \n+ \n nome=str(args%5B1%5D\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-07-59",
+            "content": "@@ -2442,48 +2442,8 @@\n 2%5D)%0A\n-            crian%C3%A7a=Crian%C3%A7a(nome,idade)%0A\n     \n@@ -2469,32 +2469,32 @@\n nserir(crian%C3%A7a)%0A\n+\n         elif arg\n@@ -2620,16 +2620,23 @@\n incando(\n+crian%C3%A7a\n )%0A      \n@@ -2726,48 +2726,8 @@\n 2%5D)%0A\n-            crian%C3%A7a=Crian%C3%A7a(nome,idade)%0A\n     \n@@ -2870,23 +2870,15 @@\n ila(\n-None,nome,idade\n+crian%C3%A7a\n )%0A  \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-15-44",
+            "content": "@@ -757,33 +757,32 @@\n        return f%22\n-%5B\n %7Bself.__brincand\n@@ -787,11 +787,9 @@\n ndo%7D\n-%5D:%5B\n+:\n %7Bsel\n@@ -799,17 +799,16 @@\n _espera%7D\n-%5D\n %22%0A%0A    d\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-16-26",
+            "content": "@@ -765,16 +765,17 @@\n eturn f%22\n+%5B\n %7Bself.__\n@@ -784,17 +784,19 @@\n incando%7D\n-:\n+%5D:%5B\n %7Bself.__\n@@ -802,16 +802,17 @@\n _espera%7D\n+%5D\n %22%0A%0A    d\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-16-58",
+            "content": "@@ -757,33 +757,32 @@\n        return f%22\n-%5B\n %7Bself.__brincand\n@@ -787,12 +787,9 @@\n ndo%7D\n-%5D=%3E%5B\n+:\n %7Bsel\n@@ -799,17 +799,16 @@\n _espera%7D\n-%5D\n %22%0A%0A    d\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-20-49",
+            "content": "@@ -767,16 +767,23 @@\n urn f%22%5B%7B\n+self.__\n brincand\n@@ -789,16 +789,23 @@\n do%7D%5D=%3E%5B%7B\n+self.__\n espera%7D%5D\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-22-58",
+            "content": "@@ -629,33 +629,32 @@\n ncando=%22 %22.join(\n-%5B\n str(crian%C3%A7a)for \n@@ -680,17 +680,16 @@\n rincando\n-%5D\n )%0A      \n@@ -706,17 +706,16 @@\n  %22.join(\n-%5B\n str(cria\n@@ -746,17 +746,16 @@\n __espera\n-%5D\n )%0A      \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-25-18",
+            "content": "@@ -629,32 +629,33 @@\n ncando=%22 %22.join(\n+%5B\n str(crian%C3%A7a)for \n@@ -669,18 +669,8 @@\n  in \n-reversed (\n self\n@@ -681,17 +681,17 @@\n rincando\n-)\n+%5D\n )%0A      \n@@ -708,16 +708,17 @@\n  %22.join(\n+%5B\n str(cria\n@@ -749,16 +749,17 @@\n __espera\n+%5D\n )%0A      \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-28-25",
+            "content": "@@ -407,16 +407,17 @@\n eturn f%22\n+%5B\n %7Bself.__\n@@ -436,16 +436,17 @@\n __idade%7D\n+%5D\n %22%0A    %0Ac\n@@ -618,22 +618,25 @@\n         \n-espera\n+brincando\n =%22 %22.joi\n@@ -681,22 +681,25 @@\n (self.__\n-espera\n+brincando\n ))%0A     \n@@ -697,33 +697,30 @@\n o))%0A        \n-brincando\n+espera\n =%22 %22.join(st\n@@ -782,29 +782,29 @@\n f%22%5B%7B\n-espera%7D%5D=%3E%5B%7Bbrincando\n+brincando%7D%5D=%3E%5B%7Bespera\n %7D%5D%22%0A\n@@ -2583,16 +2583,23 @@\n er_fila(\n+crian%C3%A7a\n )%0A      \n@@ -2846,29 +2846,123 @@\n an%C3%A7a\n-,nome, idade)%0A       \n+)%0A        elif args%5B0%5D==%22remove%22:%0A            nome=str(args%5B1%5D)%0A            trampolim.remover_fila(None,nome,idade)\n %0A   \n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-11-05_01-34-46",
+            "content": "@@ -746,25 +746,22 @@\n  self.__\n-brincando\n+espera\n )%0A      \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-36-35",
+            "content": "@@ -624,17 +624,16 @@\n espera=%22\n-,\n  %22.join(\n@@ -704,17 +704,16 @@\n ncando=%22\n-,\n  %22.join(\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-36-57",
+            "content": "@@ -788,17 +788,16 @@\n pera%7D%5D=%3E\n- \n %5B%7Bbrinca\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-37-13",
+            "content": "@@ -786,17 +786,16 @@\n espera%7D%5D\n- \n =%3E %5B%7Bbri\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-37-25",
+            "content": "@@ -914,24 +914,40 @@\n er_fila(self\n+,crian%C3%A7a:Crian%C3%A7a\n )-%3ENone:%0A   \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-39-17",
+            "content": "@@ -656,24 +656,34 @@\n  crian%C3%A7a in \n+reversed (\n self.__esper\n@@ -684,16 +684,17 @@\n _espera)\n+)\n %0A       \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-39-40",
+            "content": "@@ -656,34 +656,24 @@\n  crian%C3%A7a in \n-reversed (\n self.__esper\n@@ -674,17 +674,16 @@\n _espera)\n-)\n %0A       \n@@ -734,18 +734,8 @@\n  in \n-reversed (\n self\n@@ -747,17 +747,16 @@\n incando)\n-)\n %0A       \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-40-14",
+            "content": "@@ -1733,24 +1733,40 @@\n _lista(self,\n+crian%C3%A7a:Crian%C3%A7a,\n  nome:str)-%3E\n@@ -2708,32 +2708,63 @@\n me=str(args%5B1%5D)%0A\n+            idade=int(args%5B2%5D)%0A\n             cria\n@@ -2775,24 +2775,30 @@\n Crian%C3%A7a(nome\n+,idade\n )%0A          \n@@ -2817,23 +2817,22 @@\n remover_\n-da_list\n+crian%C3%A7\n a(crian%C3%A7\n@@ -2837,16 +2837,23 @@\n n%C3%A7a,nome\n+, idade\n )%0A      \n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-44-35",
+            "content": "@@ -2692,32 +2692,66 @@\n me=str(args%5B1%5D)%0A\n+            crian%C3%A7a=Crian%C3%A7a(nome)%0A\n             tram\n@@ -2772,32 +2772,37 @@\n da_lista(crian%C3%A7a\n+,nome\n )%0A       %0A    %0Am\n",
+            "lines": "98"
+        },
+        {
+            "label": "2025-11-05_01-47-16",
+            "content": "@@ -2739,20 +2739,23 @@\n a_lista(\n-nome\n+crian%C3%A7a\n )%0A      \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-11-05_01-49-30",
+            "content": "@@ -2084,65 +2084,8 @@\n turn\n-%0A            print(f%22fail: %7Bnome%7D nao esta no pula-pula%22)\n %0A%0Ade\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-11-05_01-51-11",
+            "content": "@@ -2107,26 +2107,22 @@\n f%22fail: \n-get_\n+%7B\n nome\n-()\n+%7D\n  nao est\n",
+            "lines": "98"
+        },
+        {
+            "label": "2025-11-05_01-51-53",
+            "content": "@@ -2077,37 +2077,24 @@\n      return%0A\n-            %0A\n             \n@@ -2111,14 +2111,18 @@\n il: \n-%7B\n+get_\n nome\n-%7D\n+()\n  nao\n",
+            "lines": "98"
+        },
+        {
+            "label": "2025-11-05_01-53-50",
+            "content": "@@ -2098,24 +2098,28 @@\n    %0A        \n+    \n print(f%22fail\n",
+            "lines": "99"
+        },
+        {
+            "label": "2025-11-05_01-54-12",
+            "content": "class Crian\u00e7a:\n    def __init__(self, nome:str, idade:int):\n        self.__nome=nome\n        self.__idade=idade\n\n    def get_nome(self)->str:\n        return self.__nome\n    def get_idade(self)->int:\n        return self.__idade\n    \n    def set_idade(self,idade:int)->None:\n        self.__idade = idade\n    def set_nome(self, nome:str)->None:\n        self.__nome=nome\n\n\n    def __str__(self)->str:\n        return f\"{self.__nome}:{self.__idade}\"\n    \nclass Trampolim:\n    def __init__(self,qtd_max:int=0):\n        self.__brincando:list[Crian\u00e7a]=[] \n        self.__espera:list[Crian\u00e7a]=[]\n\n    def __str__(self)->str:\n        espera=\", \".join(str(crian\u00e7a)for crian\u00e7a in reversed (self.__espera))\n        brincando=\", \".join(str(crian\u00e7a)for crian\u00e7a in reversed (self.__brincando))\n        return f\"[{espera}] => [{brincando}]\"\n\n    def inserir (self,crian\u00e7a:Crian\u00e7a)->None:\n        self.__espera.append(crian\u00e7a)\n    \n    def mover_fila(self)->None:\n       if len(self.__espera) >0:\n          aux:Crian\u00e7a=self.__espera.pop(0)\n          self.__brincando.append(aux)\n       return\n\n    def mover_brincando(self)->None:\n        if len (self.__brincando) >0:\n           aux=self.__brincando.pop(0)\n           self.__espera.append(aux)\n        return\n    \n    def remover_crian\u00e7a(self,crian\u00e7a:Crian\u00e7a, nome:str, idade:int)->None:\n        for i, crian\u00e7a in enumerate(self.__espera):\n            if crian\u00e7a.get_nome()==nome and crian\u00e7a.get_idade() ==idade:\n                del self.__espera[i]\n                return\n            \n        for i, crian\u00e7a in enumerate(self.__brincando):\n            if crian\u00e7a.get_nome() == nome and crian\u00e7a.get_idade() == idade:\n                del self.__espera[i]\n                return\n    \n    def remover_da_lista(self, nome:str)->None:\n        for i, crian\u00e7a in enumerate(self.__espera):\n            if crian\u00e7a.get_nome()==nome:\n                del self.__espera[i]\n                return\n            \n        for i, crian\u00e7a in enumerate (self.__brincando):\n            if crian\u00e7a.get_nome()==nome:\n                del self.__brincando[i]\n                return\n            \n        print(f\"fail: {nome} nao esta no pula-pula\")\n\ndef main():\n    trampolim=Trampolim()\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"show\":\n            print(trampolim)\n        elif args[0]==\"arrive\":\n            nome=str(args[1])\n            idade=int(args[2])\n            crian\u00e7a=Crian\u00e7a(nome,idade)\n            trampolim.inserir(crian\u00e7a)\n        elif args[0]==\"enter\":\n            trampolim.mover_fila()\n        elif args[0] ==\"leave\":\n            trampolim.mover_brincando()\n        elif args[0]==\"remove\":\n            nome=str(args[1])\n            trampolim.remover_da_lista(nome)\n       \n    \nmain()\n\n     \n        \n\n\n\n",
+            "lines": "99"
+        }
+    ]
+}
